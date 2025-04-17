@@ -51,7 +51,7 @@ You will get two project folders: one for the Laravel API project and one for th
 
 Quick start options:
 
-- Download from [Creative Tim](https://www.creative-tim.com/product/vue-material-dashboard-2?ref=readme-vmd2).
+- Download from [](https://www.creative-tim.com/product/vue-material-dashboard-2?ref=readme-vmd2).
 
 ## Introduction
 
