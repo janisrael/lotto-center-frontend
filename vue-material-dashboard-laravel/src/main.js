@@ -4,6 +4,7 @@ import store from "./store";
 import router from "./router";
 import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
+import "./assets/css/custom.css";
 import MaterialDashboard from "./material-dashboard";
 
 const appInstance = createApp(App);

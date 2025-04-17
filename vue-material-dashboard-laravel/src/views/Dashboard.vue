@@ -2,7 +2,88 @@
   <div class="py-4 container-fluid">
     <div class="row mb-4">
       <div class="col-lg-12 position-relative z-index-2">
-        <div class="row">
+       
+        <div class="row mt-4" style="margin-top: 0px !important;">
+          <div class="col-lg-4 col-md-6 mt-4">
+            <game-holder-card
+              title="Lotto Max Prize"
+              jackpot="50,000,000.00"
+              subtitle="Tuesday | Friday"
+              update="Some text here Some text here"
+              type="lottomax"
+              next_draw="Next Draw"
+            >
+
+            </game-holder-card>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4">
+            <game-holder-card
+              title="Lotto 6-49"
+              jackpot="40,000,000.00"
+              subtitle="Wednesdays | Saturdays"
+              update="Some text here Some text here"
+              type="lotto649"
+              next_draw="Next Draw"
+            >
+
+            </game-holder-card>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <game-holder-card
+              title="Lotto 6-49"
+              jackpot="40,000,000.00"
+              subtitle="Monday | Thursday"
+              update="Some text here Some text here"
+              type="dailygrand"
+              next_draw="Next Draw"
+            >
+
+            </game-holder-card>
+          </div>
+        </div>
+        <!-- Western Lotto -->
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6 mt-4">
+            <game-holder-card
+              title="Western Lotto Max Prize"
+              jackpot="2,000,000.00"
+              subtitle="Tuesday | Friday"
+              update="Some text here Some text here"
+              type="lottomax-western"
+              next_draw="Next Draw"
+            >
+
+            </game-holder-card>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4">
+            <game-holder-card
+              title="Western Lotto 6-49"
+              jackpot="2,000,000.00"
+              subtitle="Wednesdays | Saturdays"
+              update="Some text here Some text here"
+              type="lotto649-western"
+              next_draw="Next Draw"
+            >
+
+            </game-holder-card>
+          </div>
+          <!-- <div class="col-lg-4 mt-4">
+            <game-holder-card
+              title="Lotto 6-49"
+              jackpot="40,000,000.00"
+              subtitle="Monday | Thursday"
+              update="Some text here Some text here"
+              type="dailygrand"
+              next_draw="Next Draw"
+            >
+
+            </game-holder-card>
+          </div> -->
+        </div>
+
+        
+        <div class="row pills-preview-result">
+          <h3 style="padding-bottom: 30px;">Recent Draws</h3>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <mini-statistics-card
               :title="{ text: 'Today\'s Money', value: '$53k' }"
@@ -48,82 +129,8 @@
             />
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-lg-4 col-md-6 mt-4">
-            <chart-holder-card
-              title="Website Views"
-              subtitle="Last Campaign Performance"
-              update="campaign sent 2 days ago"
-            >
-              <reports-bar-chart
-                :chart="{
-                  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-                  datasets: {
-                    label: 'Sales',
-                    data: [50, 20, 10, 22, 50, 10, 40],
-                  },
-                }"
-              />
-            </chart-holder-card>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-4">
-            <chart-holder-card
-              title="Daily Sales"
-              subtitle="(<span class='font-weight-bolder'>+15%</span>) increase in today sales."
-              update="updated 4 min ago"
-              color="success"
-            >
-              <reports-line-chart
-                :chart="{
-                  labels: [
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec',
-                  ],
-                  datasets: {
-                    label: 'Mobile apps',
-                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
-                  },
-                }"
-              />
-            </chart-holder-card>
-          </div>
-          <div class="col-lg-4 mt-4">
-            <chart-holder-card
-              title="Completed Tasks"
-              subtitle="Last Campaign Performance"
-              update="just updated"
-              color="dark"
-            >
-              <reports-line-chart
-                id="tasks-chart"
-                :chart="{
-                  labels: [
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec',
-                  ],
-                  datasets: {
-                    label: 'Mobile apps',
-                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-                  },
-                }"
-              />
-            </chart-holder-card>
-          </div>
-        </div>
+
+
       </div>
     </div>
 
@@ -233,9 +240,10 @@
   </div>
 </template>
 <script>
-import ChartHolderCard from "./components/ChartHolderCard.vue";
-import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
-import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
+// import ChartHolderCard from "./components/ChartHolderCard.vue";
+import GameHolderCard from "./components/GameHolderCard.vue";
+// import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
+// import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import TimelineList from "@/examples/Cards/TimelineList.vue";
@@ -267,9 +275,10 @@ export default {
     };
   },
   components: {
-    ChartHolderCard,
-    ReportsBarChart,
-    ReportsLineChart,
+    // ChartHolderCard,
+    GameHolderCard,
+    // ReportsBarChart,
+    // ReportsLineChart,
     MiniStatisticsCard,
     ProjectCard,
     TimelineList,

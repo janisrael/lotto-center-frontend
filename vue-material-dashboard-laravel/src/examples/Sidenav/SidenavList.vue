@@ -10,7 +10,7 @@
         </sidenav-collapse>
       </li>
       <li class="nav-item">
-        <sidenav-collapse url="#" :aria-controls="''" v-bind:collapse="false" collapseRef="tables" navText="Tables">
+        <sidenav-collapse url="#" :aria-controls="''" v-bind:collapse="false" collapseRef="results" navText="Results">
           <template v-slot:icon>
             <i class="material-icons-round opacity-10 fs-5">table_view</i>
           </template>
@@ -96,7 +96,7 @@
     <div class="sidenav-footer position-absolute w-100 bottom-0">
       <div class="mx-3">
         <a class="btn mt-4 w-100" :class="`bg-gradient-${this.$store.state.color}`"
-          href="https://www.creative-tim.com/product/vue-material-dashboard-laravel-pro?_ga=2.100464214.933780196.1684307546-944306388.1662358829">Upgrade to pro</a>
+          href="">Button 1</a>
       </div>
     </div>
   </div>
