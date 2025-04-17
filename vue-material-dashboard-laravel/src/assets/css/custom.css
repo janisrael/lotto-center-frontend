@@ -131,7 +131,9 @@
     margin-bottom: 0px !important;
 }
 
-.stitched-div {
-
-
+@media (min-width: 992px) {
+    .col-lg-cus {
+        flex: 0 0 auto;
+        width: 20% !important;
+    }
 }
