@@ -17,7 +17,12 @@
                     <div class="pills-container">
 
                         <h4 class="text-color-white text-shadow-on">{{ title }}</h4>
-                        <h1 class="text-color-white text-shadow-on">$ {{ jackpot }} <span class="small-text">EST.</span></h1>
+                        <h1 v-if="type === 'dailygrand'" class="text-color-white text-shadow-on">
+                            $ {{ jackpot }} <span class="prize-small-word">per day for life,</span>
+                            <p class="prize-small-word">or a lump sum of <strong style="font-size: 26px;">$ 7,000,000</strong></p>
+                        </h1>
+                        <h1 v-else class="text-color-white text-shadow-on">$ {{ jackpot }} <span class="small-text">EST.</span></h1>
+                        
                         <h3></h3>
                     </div>
                 </div>
@@ -28,13 +33,13 @@
     <div class="card-body">
 
         <div class="row">
-            <div class="col-5">
+            <div class="col-6">
                 <div class="pills-container">
                     <h6 class="mb-0">{{ next_draw }}</h6>
                     <h4 class="mb-2" v-html="subtitle"></h4>
-                    <div class="d-flex">
+                    <div class="d-flex flex-center">
                         <i class="material-icons text-sm my-auto me-1">schedule</i>
-                        <p class="mb-0 text-sm p-default">{{ update }}</p>
+                        <p class="mb-0 text-sm p-default ">{{ update }}</p>
                     </div>
                 </div>
                 
