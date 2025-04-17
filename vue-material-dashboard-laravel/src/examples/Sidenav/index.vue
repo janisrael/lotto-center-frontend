@@ -12,19 +12,13 @@
         aria-hidden="true"
         id="iconSidenav"
       ></i>
-      <a class="m-0 navbar-brand" href="/" style="margin-left: -20px !important;">
-        <!-- <img
-          :src="
-            sidebarType === 'bg-white' ||
-            (sidebarType === 'bg-transparent' && !isDarkMode)
-              ? logoDark
-              : logo
-          "
-          class="navbar-brand-img h-100"
-          alt="main_logo"
-        /> -->
-        <span class="ms-2 font-weight-bold text-white"
-          >Lotto Command Center</span
+      <a class="m-0 navbar-brand navbar-brand-cus" href="/" style="margin-left: -20px !important;">
+
+        <div class="icon icon-shape icon-cus shadow text-center border-radius-lg bg-gradient-success">
+          <i class="opacity-10 text-white fas fa-landmark" aria-hidden="true"></i>
+        </div>
+        <span class="app-title text-white"
+          >SOURCE SELECT <br> LOTTO COMMAND CENTER</span
         >
       </a>
     </div>
@@ -41,7 +35,7 @@ import { mapState } from "vuex";
 export default {
   name: "index",
   components: {
-    SidenavList,
+    SidenavList
   },
   data() {
     return {

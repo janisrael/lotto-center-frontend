@@ -9,7 +9,7 @@
               title="Lotto Max Prize"
               jackpot="50,000,000.00"
               subtitle="Tuesday | Friday"
-              update="Some text here Some text here"
+              update="get your ticket now"
               type="lottomax"
               next_draw="Next Draw"
             >
@@ -21,7 +21,7 @@
               title="Lotto 6-49"
               jackpot="40,000,000.00"
               subtitle="Wednesdays | Saturdays"
-              update="Some text here Some text here"
+              update="get your ticket now"
               type="lotto649"
               next_draw="Next Draw"
             >
@@ -30,10 +30,10 @@
           </div>
           <div class="col-lg-4 mt-4">
             <game-holder-card
-              title="Lotto 6-49"
-              jackpot="40,000,000.00"
+              title="Lotto Daily Grand"
+              jackpot="1,000"
               subtitle="Monday | Thursday"
-              update="Some text here Some text here"
+              update="get your ticket now"
               type="dailygrand"
               next_draw="Next Draw"
             >
@@ -48,7 +48,7 @@
               title="Western Lotto Max Prize"
               jackpot="2,000,000.00"
               subtitle="Tuesday | Friday"
-              update="Some text here Some text here"
+              update="get your ticket now"
               type="lottomax-western"
               next_draw="Next Draw"
             >
@@ -60,30 +60,18 @@
               title="Western Lotto 6-49"
               jackpot="2,000,000.00"
               subtitle="Wednesdays | Saturdays"
-              update="Some text here Some text here"
+              update="get your ticket now"
               type="lotto649-western"
               next_draw="Next Draw"
             >
 
             </game-holder-card>
           </div>
-          <!-- <div class="col-lg-4 mt-4">
-            <game-holder-card
-              title="Lotto 6-49"
-              jackpot="40,000,000.00"
-              subtitle="Monday | Thursday"
-              update="Some text here Some text here"
-              type="dailygrand"
-              next_draw="Next Draw"
-            >
-
-            </game-holder-card>
-          </div> -->
         </div>
 
         
         <div class="row pills-preview-result">
-          <h3 style="padding-bottom: 30px;">Recent Draws</h3>
+          <h3 style="padding-bottom: 30px; padding-left: 30px;">Recent Draws</h3>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <mini-statistics-card
               :title="{ text: 'Today\'s Money', value: '$53k' }"

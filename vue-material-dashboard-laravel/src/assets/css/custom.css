@@ -7,6 +7,14 @@
 
 .lotto-max-color {
     background-image: linear-gradient(195deg, #95d700 0%, #699700 100%) !important;
+    /* background: repeating-linear-gradient(
+        45deg,
+        #6a970058,
+        #96d70064 10px,
+        #6a970058 10px,
+        #96d70064 20px
+        ) !important;
+        background-color: #95d700 !important; */
 }
 
 .lotto-649-color {
@@ -33,7 +41,27 @@
     color: #fff;
 }
 
+.navbar-brand-cus {
+    padding: 1rem 2rem !important;
+}
 
+.icon-cus {
+    width: 40px !important;
+    height: 40px !important;
+}
+.icon-cus i {
+    font-size: 1.3rem;
+}
+
+.app-title {
+    font-weight: 800;
+    font-size: 18px;
+    display: inline-block;
+    padding-top: 5px;
+    position: absolute;
+    padding-left: 10px;
+    font-family: 'Roboto';
+}
 .pills-container {
     text-align: center;
 }
@@ -95,4 +123,15 @@
     height: 100px;
     background: linear-gradient(to bottom, transparent, #00000026, transparent);
     position: absolute;
+}
+
+.prize-small-word {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 0px !important;
+}
+
+.stitched-div {
+
+
 }
