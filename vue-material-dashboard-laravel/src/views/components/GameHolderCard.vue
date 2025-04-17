@@ -79,7 +79,6 @@
 </template>
 
   
-  
 <script>
 import logo_lm from "@/assets/img/Lotto_Max_logo.png";
 import logo_649 from "@/assets/img/Lotto_649_logo.png";
