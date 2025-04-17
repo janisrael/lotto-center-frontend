@@ -1,17 +1,17 @@
 {
-  "name": "vue-material-dashboard-2",
+  "name": "source-select-lotto-command-center",
   "version": "3.0.0",
   "private": true,
-  "author": "Creative Tim",
-  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
-  "description": "VueJS version of Material Dashboard 2 by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/vue-material-dashboard-2/",
+  "author": "Source Select",
+  "license": "SEE LICENSE IN <https:>",
+  "description": "Source Select command center front end",
+  "homepage": "https://sourceselect.ca",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/vue-material-dashboard-2/issues"
+    "url": "https://"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/ct-vue-material-dashboard-2.git"
+    "url": "git+https://github.com/janisrael/lotto-center-frontend.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve --open",

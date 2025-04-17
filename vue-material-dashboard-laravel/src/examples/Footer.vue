@@ -6,32 +6,30 @@
           <div class="text-sm text-center copyright text-muted"
             :class="this.$store.state.isRTL ? 'text-lg-end' : 'text-lg-start'">
             © {{ new Date().getFullYear() }}, made with
-            <i class="fa fa-heart" aria-hidden="true"></i> by
-            <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-            and
-            <a href="https://updivision.com" class="font-weight-bold" target="_blank">UPDIVISION</a>
-            for a better web.
+            <i class="fa fa-heart" aria-hidden="true"></i>Care by
+            <a href="https://www.sourceselect.ca" class="font-weight-bold" target="_blank">Source Select</a>.
           </div>
         </div>
         <div class="col-lg-6">
           <ul class="nav nav-footer justify-content-center justify-content-lg-end">
             <li class="nav-item">
-              <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+                <a href="https://sourceselect.ca" class="nav-link" target="_blank">Source Select</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.updivision.com" class="nav-link text-muted" target="_blank">UPDIVISION</a>
+                <a href="https://www.source-select.ca/about-us" class="nav-link"
+                    target="_blank">About Us</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
+                <a href="https://www.sourceselect.ca/contact-us" class="nav-link"
+                    target="_blank">Contact</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
+                <a href="" class="nav-link pe-0"
+                    target="_blank">License</a>
             </li>
           </ul>
         </div>
+
       </div>
     </div>
   </footer>
