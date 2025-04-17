@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-# lotto-center-frontend
-Front end for lotto command center project
-=======
-# [Vue Material Dashboard 2 Laravel](http://demos.creative-tim.com/vue-material-dashboard-2/#/?ref=readme-vmd2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/vue-material-dashboard-2&text=Check%20Vue%20Material%20Dashboard%202%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#materialdesign%20#vue%20https://www.creative-tim.com/product/vue-material-dashboard)
+# [Vue Material Dashboard 2](http://demos.creative-tim.com/vue-material-dashboard-2/#/?ref=readme-vmd2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/vue-material-dashboard-2&text=Check%20Vue%20Material%20Dashboard%202%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#materialdesign%20#vue%20https://www.creative-tim.com/product/vue-material-dashboard)
 
 ![version](https://img.shields.io/badge/version-3.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/331/original/vue-material-dashboard-laravel.jpg?1684309813)
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/596/original/vue-material-dashboard-2.jpg)
 
 Vue Material Dashboard 2 is our newest free Admin Template based on Vue3 & Bootstrap5. If you’re a developer looking to create an admin dashboard that is developer-friendly, rich with features, and highly customisable, here is your match. Our innovative Vue3 & Bootstrap5 dashboard comes with a beautiful design inspired by Google's Material Design and it will help you create stunning websites & web apps to delight your clients
 
@@ -41,7 +37,7 @@ You will get two project folders: one for the Laravel API project and one for th
 | VueJS |
 | ----- |
 
-[![Vue Material Dashboard 2](https://s3.amazonaws.com/creativetim_bucket/products/331/original/vue-material-dashboard-laravel.jpg?1684309813)](http://demos.creative-tim.com/vue-material-dashboard-2/?ref=readme-vmd2)
+| [![Vue Material Dashboard 2](https://s3.amazonaws.com/creativetim_bucket/products/596/thumb/vue-material-dashboard-2.jpg)](http://demos.creative-tim.com/vue-material-dashboard-2/?ref=readme-vmd2)
 
 # Demo
 
@@ -74,9 +70,9 @@ We strongly recommend using [Laradock](https://laradock.io/) for Linux and Mac o
 
 Other options for your local environment:
 
-- Windows: [How to install WAMP on Windows](https://updivision.com/blog/post/beginner-s-guide-to-setting-up-your-local-development-environment-on-windows)
-- Linux & Mac: [How to install LAMP on Linux & Mac](https://updivision.com/blog/post/guide-what-is-lamp-and-how-to-install-it-on-ubuntu-and-macos)
-
+Windows: [How to install WAMP on Windows](https://updivision.com/blog/post/beginner-s-guide-to-setting-up-your-local-development-environment-on-windows)
+Linux: [How to install LAMP on Linux](https://howtoubuntu.org/how-to-install-lamp-on-ubuntu)
+Mac: [How to install MAMP on MAC](https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/)
 You will also need to install Composer 2: https://getcomposer.org/doc/00-intro.md
 
 
@@ -110,7 +106,7 @@ Install VueCLI: https://cli.vuejs.org/guide/installation.html
 5. `VUE_APP_API_BASE_URL` should contain the URL of your Laravel JSON:API Project. (eg. http://localhost:3000/api/v1)
 6. Run `npm run dev` to start the application in a local development environment or npm run build to build release distributables.
 
-## Fully Coded Elements
+## Fully Coded Elements 
 
 Vue Material Dashboard 2 is built with over 70 frontend individual elements, like buttons, inputs, navbars, nav tabs, cards, or alerts, giving you the freedom of choosing and combining. All components can take variations in color, which you can easily modify using sass files. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
 
@@ -369,7 +365,7 @@ vue-material-dashboard-2
     │   │   └── profile.module.js
     │   ├── views
     │   │   ├── components
-    |   |   ├── examples-api
+    |   |   ├── examples-api 
     |   |   |   ├── profile
     |   |   |   ├── users
     |   |   |   ├── Login.vue
@@ -462,4 +458,3 @@ Dribbble: <https://dribbble.com/creativetim>
 Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://instagram.com/creativetimofficial>
->>>>>>> 625e55aef4df17059cdde5ee3c2b5fc3d6edc7be
