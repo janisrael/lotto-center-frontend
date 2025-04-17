@@ -11,7 +11,7 @@
         v-bind="$attrs"
         :class="isBlur ? 'text-dark' : 'text-white'"
       >
-        Material Dashboard 2 Laravel
+      Lorem ipsum dolor sit amet
       </router-link>
       <button
         class="navbar-toggler shadow-none ms-2"

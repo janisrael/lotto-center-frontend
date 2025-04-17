@@ -1,0 +1,98 @@
+/* Dashboard */
+
+.pills-preview-result {
+    margin-top: 2.5rem !important;
+}
+
+
+.lotto-max-color {
+    background-image: linear-gradient(195deg, #95d700 0%, #699700 100%) !important;
+}
+
+.lotto-649-color {
+    background-image: linear-gradient(195deg, #3598f9 0%, #1e65bb 100%) !important;
+}
+
+.lotto-dailygrand-color {
+    background-image: linear-gradient(195deg, #ff944d 0%, #e86a16 100%) !important;
+}
+
+.lotto-max-western-color {
+    background-image: linear-gradient(195deg, #ffc367 0%, #ffa821 100%) !important;
+}
+
+.lotto-649-western-color {
+    background-image: linear-gradient(195deg, #ffdc3c 0%, #dfb804 100%) !important;
+}
+
+.default-color {
+    background-color: #2dce89;
+}
+
+.text-color-white {
+    color: #fff;
+}
+
+
+.pills-container {
+    text-align: center;
+}
+.pill-wrapper {
+    /* padding: 30px; */
+    padding-right: 2.25rem !important;
+}
+.pill-logo {
+    width: 160px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.pill-date {
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    margin-bottom: 0px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.text-shadow-on {
+    text-shadow: 1px 0px 7px #0000005e;
+}
+
+.pill-item-col {
+    padding: 20px 0;
+}
+
+.count-down-item {
+    padding: 20px 15px !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    border-radius: 5px !important;
+    background-image: linear-gradient(310deg, #212229, #212529) !important;
+}
+
+.flex-center {
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
+}
+
+.count-down-label {
+    font-weight: 600;
+    color: darkslategray;
+
+}
+
+.p-default {
+    font-weight: 400;
+    color: darkslategray;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #00000026, transparent);
+    position: absolute;
+}

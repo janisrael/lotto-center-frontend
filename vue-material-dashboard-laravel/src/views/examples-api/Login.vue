@@ -13,9 +13,8 @@
                         <div class="header-body text-center mb-7">
                             <div class="row justify-content-center">
                                 <div class="text-center" style="margin-bottom: 5px;">
-                                    <h3 class="text-white"> Log in to Vue Material Dashboard 2 Laravel Live Preview </h3>
-                                    <p class="text-lead text-white"> Log in to see how you can go from frontend to fullstack
-                                        in an instant with an API-based Laravel backend. </p>
+                                    <h3 class="text-white">  </h3>
+                                    <p class="text-lead text-white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
                                 </div>
                                 <div class="text-white">
                                     <h3 class="text-white"><strong>You can log in with:</strong></h3>
@@ -87,7 +86,7 @@
             </div>
         </div>
 
-        <footer class="footer position-absolute bottom-2 py-2 w-100">
+        <!-- <footer class="footer position-absolute bottom-2 py-2 w-100">
             <div class="container">
                 <div class="row align-items-center justify-content-lg-between">
                     <div class="col-12 col-md-6 my-auto">
@@ -127,7 +126,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </div>
 </template>
 

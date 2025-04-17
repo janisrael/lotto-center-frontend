@@ -13,7 +13,7 @@
         id="iconSidenav"
       ></i>
       <a class="m-0 navbar-brand" href="/" style="margin-left: -20px !important;">
-        <img
+        <!-- <img
           :src="
             sidebarType === 'bg-white' ||
             (sidebarType === 'bg-transparent' && !isDarkMode)
@@ -22,9 +22,9 @@
           "
           class="navbar-brand-img h-100"
           alt="main_logo"
-        />
+        /> -->
         <span class="ms-2 font-weight-bold text-white"
-          >Material Dashboard 2 Laravel</span
+          >Lotto Command Center</span
         >
       </a>
     </div>
