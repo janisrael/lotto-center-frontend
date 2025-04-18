@@ -7,7 +7,8 @@ const BASE_URL = process.env.VUE_APP_BASE_URL
 export default {
 
   async login(user) {
-    var response = await axios.post(API_URL + '/login', {
+    console.log(API_URL,'s')
+    var response = await axios.post(API_URL + 'auth/login', {
       email: user.email,
       password: user.password
     }, 

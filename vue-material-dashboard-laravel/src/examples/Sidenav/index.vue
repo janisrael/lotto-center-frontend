@@ -18,7 +18,7 @@
           <i class="opacity-10 text-white fas fa-landmark" aria-hidden="true"></i>
         </div>
         <span class="app-title text-white"
-          >SOURCE SELECT <br> LOTTO COMMAND CENTER</span
+          >LOTTO CENTER</span
         >
       </a>
     </div>
