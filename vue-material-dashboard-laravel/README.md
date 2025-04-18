@@ -127,7 +127,7 @@ You can access the dashboard either by using the "**Dashboard**" link in the lef
 ### Login
 The login functionality is fully implemented in our theme helping you to start your project in no time. To login into dashboard you just have to add **/login** in the URL and fill the login form with the credentials (user: admin@jsonapi.com and password: **secret**).
 
-The `src\views\examples-api\Login.vue` is the Vue component which handles the login functinality. You can easily adapt it to your needs.
+The `src\views\user\Login.vue` is the Vue component which handles the login functinality. You can easily adapt it to your needs.
 
 It uses the auth store located in `src\store\auth.module.js.`
 
@@ -168,7 +168,7 @@ It uses the auth store located in `src\store\auth.module.js.`
 ### Register
 The register functionality is fully implemented in our theme helping you to start your project in no time. To register a new user you just have to add **/signup** in the URL or click on register link from login page and fill the register form with user details.
 
-The `src\views\examples-api\Signup.vue` is the Vue component which handles the register functinality. You can easily extend it to your needs.
+The `src\views\user\Signup.vue` is the Vue component which handles the register functinality. You can easily extend it to your needs.
 
 It uses the auth store located in src\store\auth.module.js.
 
@@ -230,7 +230,7 @@ It uses the auth store located in src\store\auth.module.js.
 
 You have the option to edit the current logged in user's profile information (name, email, profile picture) and password. To access this page, just click the "**User Profile**" link in the left sidebar or add **/user-profile** in the URL.
 
-The `src\views\examples-api\profile` is the folder with Vue components that handle the update of the user information and password.
+The `src\views\user\profile` is the folder with Vue components that handle the update of the user information and password.
 
 #### Profile edit example
 
@@ -365,7 +365,7 @@ vue-material-dashboard-2
     │   │   └── profile.module.js
     │   ├── views
     │   │   ├── components
-    |   |   ├── examples-api 
+    |   |   ├── user 
     |   |   |   ├── profile
     |   |   |   ├── users
     |   |   |   ├── Login.vue

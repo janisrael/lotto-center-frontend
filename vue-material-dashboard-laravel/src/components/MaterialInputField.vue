@@ -63,7 +63,7 @@
         type: String,
         required: true,
       },
-      value: {
+      valueModel: {
         type: String,
         default: "",
       },

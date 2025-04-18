@@ -70,16 +70,28 @@
     padding-right: 2.25rem !important;
 }
 .pill-logo {
-    width: 160px;
+    width: 100%;
     max-height: 100px;
     object-fit: contain;
+}
+.pill-logo-dg {
+    margin-top: -7px;
+    margin-bottom: -10px;
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+
 }
 
 .pill-date {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: clamp(12px, 1vw, 20px) !important;
     padding-top: 1rem;
     margin-bottom: 0px;
+    line-height: 120%;
+}
+.card-next-draw {
+    font-size: clamp(12px, 1.5vw, 22px) !important;
 }
 
 .small-text {
@@ -92,6 +104,11 @@
 
 .pill-item-col {
     padding: 20px 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* optional */
 }
 
 .count-down-item {
@@ -131,9 +148,55 @@
     margin-bottom: 0px !important;
 }
 
+.card-prize {
+    font-size: clamp(12px, 1.8vw, 40px) !important;
+}
+
 @media (min-width: 992px) {
     .col-lg-cus {
         flex: 0 0 auto;
         width: 20% !important;
     }
 }
+
+
+.countdown-wrapper {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    height: 50px;
+    overflow: hidden;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .count {
+    display: block;
+    height: 50px;
+  }
+  
+  .countdown-enter-active,
+  .countdown-leave-active {
+    transition: all 0.4s ease;
+    position: absolute;
+  }
+  
+  .countdown-enter-from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  .countdown-enter-to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .countdown-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .countdown-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
+  }

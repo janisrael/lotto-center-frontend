@@ -4,10 +4,13 @@
         <div class="border-radius-lg py-3 pe-1" :class="[`bg-gradient-${color} shadow-${color}`,typeColorClass,'pill-wrapper']">
             <slot />
 
-            <div class="row">
-                <div class="col-5 pill-item-col">
+            <div class="row" style="padding: 10px;">
+                <div class="col-lg-4 col-md-6 pill-item-col">
                     <div class="pills-container">
-                        <img class="pill-logo" :src="getLogo" />
+                        <img       
+                            :class="(type === 'dailygrand' || type === 'lotto649-western') ? 'pill-logo-dg' : 'pill-logo'" 
+                            :src="getLogo" 
+                            />
                         <p class="text-color-white pill-date text-shadow-on">
                             {{ getDrawDate }}
                         </p>
@@ -17,11 +20,11 @@
                     <div class="pills-container">
 
                         <h4 class="text-color-white text-shadow-on">{{ title }}</h4>
-                        <h1 v-if="type === 'dailygrand'" class="text-color-white text-shadow-on">
+                        <h1 v-if="type === 'dailygrand'" class="text-color-white text-shadow-on card-prize">
                             $ {{ jackpot }} <span class="prize-small-word">per day for life,</span>
                             <p class="prize-small-word">or a lump sum of <strong style="font-size: 26px;">$ 7,000,000</strong></p>
                         </h1>
-                        <h1 v-else class="text-color-white text-shadow-on">$ {{ jackpot }} <span class="small-text">EST.</span></h1>
+                        <h1 v-else class="text-color-white text-shadow-on card-prize">$ {{ jackpot }} <span class="small-text">EST.</span></h1>
                         
                         <h3></h3>
                     </div>
@@ -33,10 +36,10 @@
     <div class="card-body">
 
         <div class="row">
-            <div class="col-6">
+            <div class="col-lg-4 col-md-12">
                 <div class="pills-container">
-                    <h6 class="mb-0">{{ next_draw }}</h6>
-                    <h4 class="mb-2" v-html="subtitle"></h4>
+                    <h6 class="mb-0 ">{{ next_draw }}</h6>
+                    <h4 class="mb-2 card-next-draw" v-html="subtitle"></h4>
                     <div class="d-flex flex-center">
                         <i class="material-icons text-sm my-auto me-1">schedule</i>
                         <p class="mb-0 text-sm p-default ">{{ update }}</p>
@@ -237,10 +240,13 @@ export default {
         getDrawDate() {
             
             const classMap = {
-                lottomax: this.nextDrawLottoMaxDate,
-                lotto649: this.nextDrawLotto649Date,
-                dailygrand: this.nextDrawLottoDG,
+                'lottomax': this.nextDrawLottoMaxDate,
+                'lotto649': this.nextDrawLotto649Date,
+                'dailygrand': this.nextDrawLottoDG,
+                'lottomax-western': this.nextDrawLottoMaxDate,
+                'lotto649-western': this.nextDrawLotto649Date
             };
+            
             return classMap[this.type] || this.nextDrawLottoMaxDate;
         }
     },
