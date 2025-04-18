@@ -86,47 +86,38 @@
             </div>
         </div>
 
-        <!-- <footer class="footer position-absolute bottom-2 py-2 w-100">
+        <footer class="footer position-absolute bottom-2 py-2 w-100">
             <div class="container">
                 <div class="row align-items-center justify-content-lg-between">
                     <div class="col-12 col-md-6 my-auto">
                         <div class="copyright text-center text-sm text-white text-lg-start">
                             © {{ new Date().getFullYear() }}, made with
-                            <i class="fa fa-heart" aria-hidden="true"></i> by
-                            <a href="https://www.creative-tim.com" class="font-weight-bold text-white"
-                                target="_blank">Creative Tim</a>
-                            and
-                            <a href="https://updivision.com" class="font-weight-bold text-white"
-                                target="_blank">UPDIVISION</a>
-                            for a better web.
+                            <i class="fa fa-heart" aria-hidden="true"></i>Care by
+                            <a href="https://www.sourceselect.ca" class="font-weight-bold" target="_blank">Source Select</a>.
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                             <li class="nav-item">
-                                <a href="https://www.creative-tim.com" class="nav-link text-white" target="_blank">Creative
-                                    Tim</a>
+                                <a href="https://sourceselect.ca" class="nav-link text-white" target="_blank">Source Select</a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://updivision.com" class="nav-link text-white" target="_blank">UPDIVISION</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/presentation" class="nav-link text-white"
+                                <a href="https://www.source-select.ca/about-us" class="nav-link text-white"
                                     target="_blank">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://www.creative-tim.com/blog" class="nav-link text-white"
-                                    target="_blank">Blog</a>
+                                <a href="https://www.sourceselect.ca/contact-us" class="nav-link text-white"
+                                    target="_blank">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-white"
+                                <a href="" class="nav-link pe-0 text-white"
                                     target="_blank">License</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </div>
 </template>
 

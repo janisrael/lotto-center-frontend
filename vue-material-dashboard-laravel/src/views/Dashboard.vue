@@ -5,6 +5,33 @@
        
         <div class="row mt-4" style="margin-top: 0px !important;">
           <div class="col-lg-4 col-md-6 mt-4">
+            <!-- <chart-holder-card
+              title="Daily Sales"
+              subtitle="(<span class='font-weight-bolder'>+15%</span>) increase in today sales."
+              update="updated 4 min ago"
+              color="success"
+            >
+              <reports-line-chart
+                :chart="{
+                  labels: [
+                    'Apr 1',
+                    'May 1',
+                    'Jun 1',
+                    'Jul 1',
+                    'Aug 1',
+                    'Sep 1',
+                    'Oct 1',
+                    'Nov 1',
+                    'Dec 1',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 1000],
+                  },
+                }"
+              />
+            </chart-holder-card> -->
+            
             <game-holder-card
               title="Lotto Max Prize"
               jackpot="50,000,000.00"
@@ -72,7 +99,7 @@
         
         <div class="row pills-preview-result">
           <h3 style="padding-bottom: 30px; padding-left: 30px;">Recent Draws</h3>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-cus col-lg-2 col-md-6 col-sm-6">
             <mini-statistics-card
               :title="{ text: 'Today\'s Money', value: '$53k' }"
               detail="<span class='text-success text-sm font-weight-bolder'>+55%</span> than last week"
@@ -83,7 +110,7 @@
               }"
             />
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
+          <div class="col-lg-cus col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-4">
             <mini-statistics-card
               :title="{ text: 'Today\'s Users', value: '2,300' }"
               detail="<span class='text-success text-sm font-weight-bolder'>+3%</span> than last month"
@@ -94,7 +121,7 @@
               }"
             />
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
+          <div class="col-lg-cus col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-4">
             <mini-statistics-card
               :title="{ text: 'New Clients', value: '3,462' }"
               detail="<span class='text-danger text-sm font-weight-bolder'>-2%</span> than yesterday"
@@ -105,7 +132,18 @@
               }"
             />
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
+          <div class="col-lg-cus col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-4">
+            <mini-statistics-card
+              :title="{ text: 'Sales', value: '$103,430' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> Just updated"
+              :icon="{
+                name: 'weekend',
+                color: 'text-white',
+                background: 'info',
+              }"
+            />
+          </div>
+          <div class="col-lg-cus col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-4">
             <mini-statistics-card
               :title="{ text: 'Sales', value: '$103,430' }"
               detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> Just updated"
