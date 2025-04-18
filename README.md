@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# lotto-center-frontend
+Front end for lotto command center project
+=======
 # [Vue Material Dashboard 2 Laravel](http://demos.creative-tim.com/vue-material-dashboard-2/#/?ref=readme-vmd2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/vue-material-dashboard-2&text=Check%20Vue%20Material%20Dashboard%202%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#materialdesign%20#vue%20https://www.creative-tim.com/product/vue-material-dashboard)
 
 ![version](https://img.shields.io/badge/version-3.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aissue+is%3Aclosed)
@@ -127,7 +131,7 @@ You can access the dashboard either by using the "**Dashboard**" link in the lef
 ### Login
 The login functionality is fully implemented in our theme helping you to start your project in no time. To login into dashboard you just have to add **/login** in the URL and fill the login form with the credentials (user: admin@jsonapi.com and password: **secret**).
 
-The `src\views\examples-api\Login.vue` is the Vue component which handles the login functinality. You can easily adapt it to your needs.
+The `src\views\user\Login.vue` is the Vue component which handles the login functinality. You can easily adapt it to your needs.
 
 It uses the auth store located in `src\store\auth.module.js.`
 
@@ -168,7 +172,7 @@ It uses the auth store located in `src\store\auth.module.js.`
 ### Register
 The register functionality is fully implemented in our theme helping you to start your project in no time. To register a new user you just have to add **/signup** in the URL or click on register link from login page and fill the register form with user details.
 
-The `src\views\examples-api\Signup.vue` is the Vue component which handles the register functinality. You can easily extend it to your needs.
+The `src\views\user\Signup.vue` is the Vue component which handles the register functinality. You can easily extend it to your needs.
 
 It uses the auth store located in src\store\auth.module.js.
 
@@ -230,7 +234,7 @@ It uses the auth store located in src\store\auth.module.js.
 
 You have the option to edit the current logged in user's profile information (name, email, profile picture) and password. To access this page, just click the "**User Profile**" link in the left sidebar or add **/user-profile** in the URL.
 
-The `src\views\examples-api\profile` is the folder with Vue components that handle the update of the user information and password.
+The `src\views\user\profile` is the folder with Vue components that handle the update of the user information and password.
 
 #### Profile edit example
 
@@ -365,7 +369,7 @@ vue-material-dashboard-2
     │   │   └── profile.module.js
     │   ├── views
     │   │   ├── components
-    |   |   ├── examples-api
+    |   |   ├── user
     |   |   |   ├── profile
     |   |   |   ├── users
     |   |   |   ├── Login.vue
@@ -458,3 +462,4 @@ Dribbble: <https://dribbble.com/creativetim>
 Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://instagram.com/creativetimofficial>
+>>>>>>> 625e55aef4df17059cdde5ee3c2b5fc3d6edc7be
