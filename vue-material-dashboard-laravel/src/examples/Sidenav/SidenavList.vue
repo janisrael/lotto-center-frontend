@@ -79,14 +79,14 @@
         </sidenav-collapse>
       </li>
       <li class="nav-item">
-        <sidenav-collapse url="#" :aria-controls="''" v-bind:collapse="false" collapseRef="sign-in" navText="SignIn">
+        <sidenav-collapse url="#" :aria-controls="''" v-bind:collapse="false" collapseRef="login" navText="SignIn">
           <template v-slot:icon>
             <i class="material-icons-round opacity-10 fs-5">login</i>
           </template>
         </sidenav-collapse>
       </li>
       <li class="nav-item">
-        <sidenav-collapse url="#" :aria-controls="''" v-bind:collapse="false" collapseRef="sign-up" navText="SignUp">
+        <sidenav-collapse url="#" :aria-controls="''" v-bind:collapse="false" collapseRef="signup" navText="SignUp">
           <template v-slot:icon>
             <i class="material-icons-round opacity-10 fs-5">assignment</i>
           </template>

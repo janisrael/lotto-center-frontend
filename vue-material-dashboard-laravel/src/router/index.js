@@ -7,12 +7,13 @@ import Notifications from "../views/Notifications.vue";
 import Profile from "../views/Profile.vue";
 import SignIn from "../views/SignIn.vue";
 import SignUp from "../views/SignUp.vue";
-import Login from "../views/examples-api/Login.vue";
-import Signup from "../views/examples-api/Signup.vue";
-import PasswordForgot from "../views/examples-api/PasswordForgot.vue";
-import PasswordReset from "../views/examples-api/PasswordReset.vue";
-import UserProfile from "../views/examples-api/profile/UserProfile.vue";
-import Users from "../views/examples-api/users/UsersList.vue";
+
+import Login from "../views/user/Login.vue";
+import Signup from "../views/user/Signup.vue";
+import PasswordForgot from "../views/user/PasswordForgot.vue";
+import PasswordReset from "../views/user/PasswordReset.vue";
+import UserProfile from "../views/user/profile/UserProfile.vue";
+import Users from "../views/user/users/UsersList.vue";
 
 const routes = [
   {
@@ -65,6 +66,7 @@ const routes = [
     name: "Login",
     component: Login
   },
+  // use this one
   {
     path: "/signup",
     name: "Signup",

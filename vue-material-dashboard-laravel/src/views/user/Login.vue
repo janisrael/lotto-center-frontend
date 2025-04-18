@@ -14,7 +14,7 @@
                             <div class="row justify-content-center">
                                 <div class="text-center" style="margin-bottom: 5px;">
                                     <h3 class="text-white">  </h3>
-                                    <p class="text-lead text-white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+                                    <p class="text-lead text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
                                 </div>
                                 <div class="text-white">
                                     <h3 class="text-white"><strong>You can log in with:</strong></h3>
@@ -56,7 +56,10 @@
                                 @invalid-submit="badSubmit">
                                 <div class="mb-3">
                                     <material-input-field id="email" v-model:value="user.email" type="email" label="Email"
-                                        name="email" variant="static" />
+                                        name="email" variant="static"/>
+
+            
+              
                                 </div>
                                 <div class="mb-3">
                                     <material-input-field id="password" v-model:value="user.password" type="password"
@@ -142,7 +145,7 @@ export default {
     },
     data() {
         return {
-            user: { email: "admin@jsonapi.com", password: "secret" },
+            user: { email: "", password: "" },
             schema: Yup.object().shape({
                 email: Yup.string().email("Email has to be a valid email address").required("Email is a required input"),
                 password: Yup.string().required("Password is a required input")
@@ -165,6 +168,7 @@ export default {
     methods: {
         ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
         async handleLogin() {
+            console.log('test')
             try {
                 await this.$store.dispatch('auth/login', this.user);
                 this.$router.push({ name: 'Dashboard' })

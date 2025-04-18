@@ -41,6 +41,7 @@
               <form role="form" class="text-start mt-3">
                 <div class="mb-3">
                   <material-input
+                    v-model="email"
                     id="email"
                     type="email"
                     label="Email"
@@ -49,6 +50,7 @@
                 </div>
                 <div class="mb-3">
                   <material-input
+                    v-model="password"
                     id="password"
                     type="password"
                     label="Password"
@@ -64,6 +66,7 @@
                     variant="gradient"
                     color="success"
                     fullWidth
+                    @click="handleSignin"
                     >Sign in</material-button
                   >
                 </div>
@@ -150,6 +153,12 @@ export default {
     MaterialSwitch,
     MaterialButton,
   },
+  data() {
+    return {
+      email: "",
+      password: ""
+    }
+  },
   beforeMount() {
     this.toggleEveryDisplay();
     this.toggleHideConfig();
@@ -160,6 +169,10 @@ export default {
   },
   methods: {
     ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
+    handleSignin() {
+     
+      console.log(this.email, this.password)
+    }
   },
 };
 </script>

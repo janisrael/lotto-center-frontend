@@ -43,6 +43,7 @@
     </div>
     <div class="card-body px-0 pb-2">
       <div class="table-responsive">
+        
         <table class="table align-items-center mb-0">
           <thead>
             <tr>
@@ -61,18 +62,7 @@
           </thead>
           <tbody>
             <tr
-              v-for="(
-                {
-                  logo,
-                  title,
-                  members,
-                  budget,
-                  progress: { percentage, color },
-                },
-                index
-              ) of projects"
-              :key="index"
-            >
+              v-for="({logo,title,members,budget,progress: { percentage, color },},index) of projects" :key="index">
               <td>
                 <div class="d-flex px-2 py-1">
                   <div>
