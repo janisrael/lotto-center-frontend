@@ -63,6 +63,12 @@ export default {
     if (window.innerWidth > 1200) {
       sidenav.classList.add("g-sidenav-pinned");
     }
-  }
+  },
+  mounted () {
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.$store.dispatch("result/getResults");
+    }
+  },
 };
 </script>

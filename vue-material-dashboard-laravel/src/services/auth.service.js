@@ -1,5 +1,5 @@
 import axios from 'axios';
-import authHeader from './auth-header';
+// import authHeader from './auth-header';
 
 const API_URL = process.env.VUE_APP_API_BASE_URL
 const BASE_URL = process.env.VUE_APP_BASE_URL
@@ -18,15 +18,17 @@ export default {
         "Content-Type": "application/vnd.api+json",
       }
     });
-    if (response.data.access_token) {
-      localStorage.setItem('user_free', JSON.stringify(response.data.access_token));
+    if (response.data.token) {
+      localStorage.setItem('user_', JSON.stringify(response.data));
+      localStorage.setItem('token', response.data.token)
     }
     return response.data;
   },
 
   async logout() {
-    await axios.post(API_URL + "/logout", {}, { headers: authHeader() })
-    localStorage.removeItem('user_free');
+    // await axios.post(API_URL + "/logout", {}, { headers: authHeader() })
+    localStorage.removeItem('user_');
+    localStorage.removeItem('token');
   },
 
   async register(user) {

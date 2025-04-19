@@ -15,6 +15,13 @@ import PasswordReset from "../views/user/PasswordReset.vue";
 import UserProfile from "../views/user/profile/UserProfile.vue";
 import Users from "../views/user/users/UsersList.vue";
 
+// Helper function to check authentication (e.g., check token in localStorage)
+function checkAuthentication() {
+  const token = localStorage.getItem("token");  // Example: Check if token exists
+  console.log(token)
+  return token ? true : false;  // Return true if token exists, else false
+}
+
 const routes = [
   {
     path: "/",
@@ -25,31 +32,37 @@ const routes = [
     path: "/dashboard",
     name: "Dashboard",
     component: Dashboard,
+    meta: { requiresAuth: true },  // Protect this route
   },
   {
     path: "/results",
     name: "Results",
     component: Tables,
+    meta: { requiresAuth: true },  // Protect this route
   },
   {
     path: "/billing",
     name: "Billing",
     component: Billing,
+    meta: { requiresAuth: true },  // Protect this route
   },
   {
     path: "/rtl-page",
     name: "RTL",
     component: RTL,
+    meta: { requiresAuth: true },  // Protect this route
   },
   {
     path: "/notifications",
     name: "Notifications",
     component: Notifications,
+    meta: { requiresAuth: true },  // Protect this route
   },
   {
     path: "/profile",
     name: "Profile",
     component: Profile,
+    meta: { requiresAuth: true },  // Protect this route
   },
   {
     path: "/sign-in",
@@ -64,40 +77,58 @@ const routes = [
   {
     path: "/login",
     name: "Login",
-    component: Login
+    component: Login,
   },
-  // use this one
   {
     path: "/signup",
     name: "Signup",
-    component: Signup
+    component: Signup,
   },
   {
     path: "/password-forgot",
     name: "Password Forgot",
-    component: PasswordForgot
+    component: PasswordForgot,
   },
   {
     path: "/password-reset",
     name: "Password Reset",
-    component: PasswordReset
+    component: PasswordReset,
   },
   {
     path: "/user-profile",
     name: "User Profile",
-    component: UserProfile
+    component: UserProfile,
+    meta: { requiresAuth: true },  // Protect this route
   },
   {
-    path: '/users',
+    path: "/users",
     name: "Users",
-    component: Users
-  }
+    component: Users,
+    meta: { requiresAuth: true },  // Protect this route
+  },
 ];
 
+// Create the router instance
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   linkActiveClass: "active",
+});
+
+// Global beforeEach navigation guard
+router.beforeEach((to, from, next) => {
+  // Check if the route requires authentication
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    const isAuthenticated = checkAuthentication();  // Check if user is authenticated
+
+    if (isAuthenticated) {
+      next();  // Allow access to the route
+    } else {
+      next({ name: "Login" });  // Redirect to login if not authenticated
+    }
+  } else {
+    next();  // Allow access to routes that do not require authentication
+  }
 });
 
 export default router;

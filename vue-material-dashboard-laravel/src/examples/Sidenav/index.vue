@@ -21,6 +21,13 @@
           >LOTTO CENTER</span
         >
       </a>
+      <a href="#" @click="toogleNavbar" class="p-0 nav-link text-body lh-1" id="iconNavbarSidenav" style="float:right;margin-top: -44px;">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
     </div>
     <hr class="horizontal light mt-0 mb-2" />
     <sidenav-list />
@@ -31,6 +38,7 @@ import SidenavList from "./SidenavList.vue";
 import logo from "@/assets/img/logo-ct.png";
 import logoDark from "@/assets/img/logo-ct-dark.png";
 import { mapState } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   name: "index",
@@ -45,6 +53,12 @@ export default {
   },
   computed: {
     ...mapState(["isRTL", "sidebarType", "isDarkMode"]),
+  },
+  methods: {
+    ...mapMutations(["navbarMinimize"]),
+    toogleNavbar() {
+      this.navbarMinimize();
+    }
   },
 };
 </script>

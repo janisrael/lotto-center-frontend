@@ -31,26 +31,18 @@
               <hr class="m-0">
 
               <!--Logout-->
-              <li class="nav-item d-flex align-items-center">
-                <router-link :to="{ name: 'Login' }" @click="logout" class="px-0 nav-link font-weight-bold lh-1 d-flex align-items-center">
+              <li class="nav-item d-flex align-items-center" @click="logout()">
+                <!-- <router-link :to="{ name: 'Login' }" @click="logout" class="px-0 nav-link font-weight-bold lh-1 d-flex align-items-center"> -->
                   <i class="material-icons ms-2" :class="isRTL ? 'ms-sm-2' : 'me-sm-1'">
                     logout
                   </i>
                   Logout
-                </router-link>
+                <!-- </router-link> -->
               </li>
             </ul>
           </li>
 
-          <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-            <a href="#" @click="toggleSidebar" class="p-0 nav-link text-body lh-1" id="iconNavbarSidenav">
-              <div class="sidenav-toggler-inner">
-                <i class="sidenav-toggler-line"></i>
-                <i class="sidenav-toggler-line"></i>
-                <i class="sidenav-toggler-line"></i>
-              </div>
-            </a>
-          </li>
+          
 
           <li class="px-3 nav-item d-flex align-items-center">
             <a class="p-0 nav-link lh-1" @click="toggleConfigurator" :class="color ? color : 'text-body'">
@@ -142,6 +134,15 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+            <a href="#" @click="toggleSidebar" class="p-0 nav-link text-body lh-1" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -172,6 +173,7 @@ export default {
 
     logout(){
       this.$store.dispatch("auth/logout");
+      this.$router.push({ name: 'Login' })
     }
   },
   components: {
