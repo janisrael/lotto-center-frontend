@@ -31,10 +31,11 @@
                 }"
               />
             </chart-holder-card> -->
-            
+            <!-- <h1>{{  lottoResult  }} </h1> -->
             <game-holder-card
+              v-if="lottoResult"
               title="Lotto Max Prize"
-              jackpot="50,000,000.00"
+              :jackpot="lottoResult.jackpot[0].prize"
               subtitle="Tuesday | Friday"
               update="get your ticket now"
               type="lottomax"
@@ -45,8 +46,9 @@
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
             <game-holder-card
+             v-if="lottoResult"
               title="Lotto 6-49"
-              jackpot="40,000,000.00"
+              :jackpot="lottoResult.jackpot[2].prize"
               subtitle="Wednesdays | Saturdays"
               update="get your ticket now"
               type="lotto649"
@@ -57,8 +59,9 @@
           </div>
           <div class="col-lg-4 mt-4">
             <game-holder-card
+             v-if="lottoResult"
               title="Lotto Daily Grand"
-              jackpot="1,000"
+              :jackpot="lottoResult.jackpot[4].prize"
               subtitle="Monday | Thursday"
               update="get your ticket now"
               type="dailygrand"
@@ -72,8 +75,9 @@
         <div class="row mt-4">
           <div class="col-lg-4 col-md-6 mt-4">
             <game-holder-card
+             v-if="lottoResult"
               title="Western Lotto Max Prize"
-              jackpot="2,000,000.00"
+              :jackpot="lottoResult.jackpot[1].prize"
               subtitle="Tuesday | Friday"
               update="get your ticket now"
               type="lottomax-western"
@@ -84,8 +88,9 @@
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
             <game-holder-card
+             v-if="lottoResult"
               title="Western Lotto 6-49"
-              jackpot="2,000,000.00"
+              :jackpot="lottoResult.jackpot[3].prize"
               subtitle="Wednesdays | Saturdays"
               update="get your ticket now"
               type="lotto649-western"
@@ -98,7 +103,7 @@
 
         
         <div class="row pills-preview-result">
-          <h3 style="padding-bottom: 30px; padding-left: 30px;">Recent Draws</h3>
+          <h3 style="padding-bottom: 30px; padding-left: 30px;">Statistics</h3>
           <div class="col-lg-cus col-lg-2 col-md-6 col-sm-6">
             <mini-statistics-card
               :title="{ text: 'Today\'s Money', value: '$53k' }"
@@ -161,59 +166,22 @@
     </div>
 
     <div class="row">
+      <h3 style="padding-bottom: 30px; padding-left: 30px;">Recent Draws</h3>
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <project-card
-          title="Projects"
+        <RecentResultCard
+          v-if="lottoResult"
+          title="Recent Draw Results"
           description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>30 done</span> this month"
-          :headers="['Companies', 'Members', 'Budget', 'Progress']"
-          :projects="[
-            {
-              logo: logoXD,
-              title: 'Material XD Material XD Version',
-              members: [team1, team2, team3, team4],
-              budget: '$14,000',
-              progress: { percentage: 60, color: 'info' },
-            },
-            {
-              logo: logoAtlassian,
-              title: 'Add Progress Track',
-              members: [team2, team4],
-              budget: '$3,000',
-              progress: { percentage: 10, color: 'info' },
-            },
-            {
-              logo: logoSlack,
-              title: 'Fix Platform Errors',
-              members: [team3, team1],
-              budget: 'Not set',
-              progress: { percentage: 100, color: 'success' },
-            },
-            {
-              logo: logoSpotify,
-              title: 'Launch our Mobile App',
-              members: [team4, team3, team4, team1],
-              budget: '$20,500',
-              progress: { percentage: 100, color: 'success' },
-            },
-            {
-              logo: logoJira,
-              title: 'Add the New Pricing Page',
-              members: [team4],
-              budget: '$500',
-              progress: { percentage: 25, color: 'info' },
-            },
-            {
-              logo: logoJira,
-              title: 'Redesign New Online Shop',
-              members: [team1, team4],
-              budget: '$2,000',
-              progress: { percentage: 40, color: 'info' },
-            },
-          ]"
+          :headers="['Game', 'Winning Number', 'Draw Date', 'Bonus', 'Extra', 'Winner']"
+          :projects="lottoResult.results"
+          @getdetails="getDetails"
         />
       </div>
       <div class="col-lg-4 col-md-6">
-        <timeline-list
+        <RecentResultDetails 
+        :result_details="result_details"
+        ></RecentResultDetails>
+        <!-- <timeline-list
           class="h-100"
           title="Orders overview"
           description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
@@ -260,7 +228,7 @@
             date-time="18 DEC 4:54 AM"
             class="pb-1"
           />
-        </timeline-list>
+        </timeline-list> -->
       </div>
     </div>
   </div>
@@ -271,9 +239,9 @@ import GameHolderCard from "./components/GameHolderCard.vue";
 // import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
 // import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
-import ProjectCard from "./components/ProjectCard.vue";
-import TimelineList from "@/examples/Cards/TimelineList.vue";
-import TimelineItem from "@/examples/Cards/TimelineItem.vue";
+// import ProjectCard from "./components/ProjectCard.vue";
+// import TimelineList from "@/examples/Cards/TimelineList.vue";
+// import TimelineItem from "@/examples/Cards/TimelineItem.vue";
 import logoXD from "@/assets/img/small-logos/logo-xd.svg";
 import logoAtlassian from "@/assets/img/small-logos/logo-atlassian.svg";
 import logoSlack from "@/assets/img/small-logos/logo-slack.svg";
@@ -284,6 +252,9 @@ import team1 from "@/assets/img/team-1.jpg";
 import team2 from "@/assets/img/team-2.jpg";
 import team3 from "@/assets/img/team-3.jpg";
 import team4 from "@/assets/img/team-4.jpg";
+import RecentResultCard from "./components/RecentResultCard.vue";
+import RecentResultDetails from "./components/RecentResultDetails.vue";
+// import { mapState } from "vuex";
 export default {
   name: "dashboard-default",
   data() {
@@ -298,6 +269,7 @@ export default {
       logoSpotify,
       logoJira,
       logoInvision,
+      result_details: {}
     };
   },
   components: {
@@ -306,9 +278,21 @@ export default {
     // ReportsBarChart,
     // ReportsLineChart,
     MiniStatisticsCard,
-    ProjectCard,
-    TimelineList,
-    TimelineItem,
+    // ProjectCard,
+    RecentResultCard,
+    RecentResultDetails,
+    // TimelineList,
+    // TimelineItem,
+  },
+  computed: {
+    lottoResult() {
+      return this.$store.getters["result/getLottoResult"];
+    }
+  },
+  methods: {
+    getDetails(value) {
+      this.result_details = value
+    }
   },
 };
 </script>

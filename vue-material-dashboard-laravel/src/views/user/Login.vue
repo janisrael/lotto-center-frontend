@@ -171,6 +171,14 @@ export default {
             console.log('test')
             try {
                 await this.$store.dispatch('auth/login', this.user);
+ 
+                this.$store.dispatch("result/getResults")
+                .then(response => {
+                    console.log("Resolved:", response);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
                 this.$router.push({ name: 'Dashboard' })
             } catch (error) {
                 showSwal.methods.showSwal({

@@ -24,7 +24,7 @@
                             $ {{ jackpot }} <span class="prize-small-word">per day for life,</span>
                             <p class="prize-small-word">or a lump sum of <strong style="font-size: 26px;">$ 7,000,000</strong></p>
                         </h1>
-                        <h1 v-else class="text-color-white text-shadow-on card-prize">$ {{ jackpot }} <span class="small-text">EST.</span></h1>
+                        <h1 v-else class="text-color-white text-shadow-on card-prize"> {{ currencyFormater(jackpot) }} <span class="small-text">EST.</span></h1>
                         
                         <h3></h3>
                     </div>
@@ -259,6 +259,14 @@ export default {
     },
 
     methods: {
+        currencyFormater(value) {
+            console.log(value)
+            const formattedCurrency = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+            }).format(value);
+            return formattedCurrency
+        },
         getNextDailyGrandDraw() {
             const now = new Date();
 
